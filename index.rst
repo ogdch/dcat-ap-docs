@@ -11,7 +11,19 @@ There are several possibilities to add metadata on the portal:
 #. Provide a RDF/XML DCAT catalog endpoint for harvesting (*recommended for >=100 datasets*)
 
 
-All of the above options make use of the DCAT-AP format, which is described here.
+All of the above options make use of the :doc:`DCAT-AP format <dcat-ap-format>`.
+
+:doc:`dcat-ap-format`
+  Description of the fields that are used and how to create the RDF/XML file
+
+:doc:`form`
+  How to use the form provided by the Swiss open data portal
+
+:doc:`upload`
+  Import a RDF/XML by uploading a file to the portal
+
+:doc:`harvester`
+  How to build a source to be harvested
 
 .. toctree::
   :maxdepth: 1
