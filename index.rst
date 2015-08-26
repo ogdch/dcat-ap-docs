@@ -12,3 +12,12 @@ There are several possibilities to add metadata on the portal:
 
 
 All of the above options make use of the DCAT-AP format, which is described here.
+
+.. toctree::
+  :maxdepth: 1
+  :hidden:
+
+  dcat-ap-format
+  form
+  upload
+  harvester
