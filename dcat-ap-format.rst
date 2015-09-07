@@ -3,8 +3,8 @@ DCAT-AP Switzerland Format
 ==========================
 
 
-Full dataset RDF example: `ogdch_dcatap_import.rdf <https://github.com/ogdch/ckanext-switzerland/blob/master/ogdch_dcatap_import.rdf>`_
-Themes:  `opendataswiss-themes.rdf <https://github.com/ogdch/ckanext-switzerland/blob/master/opendataswiss-themes.rdf>`_
+- Full dataset RDF example: `ogdch_dcatap_import.rdf <https://github.com/ogdch/dcat-ap-docs/blob/master/ogdch_dcatap_import.rdf>`_
+- Themes:  `opendataswiss-themes.rdf <https://github.com/ogdch/dcat-ap-docs/blob/master/opendataswiss-themes.rdf>`_
 
 .. code:: xml
 
