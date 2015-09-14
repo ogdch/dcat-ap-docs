@@ -1,6 +1,6 @@
-==========================
+**************************
 DCAT-AP Switzerland Format
-==========================
+**************************
 
 The following page is the reference documentation of the DCAT-AP Switzerland Format. 
 
@@ -8,9 +8,9 @@ Have a look at the following example for a quick start:
 
 - Full dataset RDF example: `ogdch_dcatap_import.rdf <https://github.com/ogdch/dcat-ap-docs/blob/master/ogdch_dcatap_import.rdf>`_
 
-----------
+==========
 Namespaces
-----------
+==========
 
 .. code:: xml
 
@@ -26,9 +26,9 @@ Namespaces
    xmlns:odrs="http://schema.theodi.org/odrs#"
    xmlns:schema="http://schema.org/">
 
---------------------
+====================
 Internationalization
---------------------
+====================
 
 The DCAT-AP for Switzerland Standard expects that text elements of the data sets and their distributions be translated in the following four languages:
 
