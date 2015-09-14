@@ -46,19 +46,19 @@ The multi-lingual elements have to contain the :code:`xml:lang` attribute, as th
   <dct:title xml:lang="it">IT Titolo</dct:title>
   <dct:title xml:lang="en">EN Title</dct:title>
 
--------------------------------
+===============================
 DCAT-AP reference documentation
--------------------------------
+===============================
 
-
+----------------------------------
 Definition of :code:`dcat:Dataset`
 ----------------------------------
 
-
+:code:`dct:identifier`
+----------------------
 
 =========== ===
-Name        :code:`dct:identifier`
-Attributes  -
+Attributes  
 Type        :code:`rdfs:Literal` http://www.w3.org/TR/rdf-schema/#ch_literal
 Mandatory   yes
 Cardinality 1..1
@@ -67,8 +67,10 @@ Example     :code:`<dct:identifier>325@swisstopo</dct:identifier>`
 Open point  Who gives out the publisher ID ?
 =========== ===
 
+:code:`dct:title`
+-----------------
+
 =========== ===
-Name        :code:`dct:title`
 Attributes  =========== =============================================
             Name        :code:`xml:lang`
             Content     :code:`en` :code:`de` :code:`fr` :code:`it`
@@ -81,8 +83,10 @@ Description The title of the dataset in the language defined by the :code:`xml:l
 Example     :code:`<dct:title xml:lang="de">Eisenbahnlärm Nacht</dct:title>`
 =========== ===
 
+:code:`dct:description`
+-----------------------
+
 =========== ===
-Name        :code:`dct:description`
 Attributes  =========== =============================================
             Name        :code:`xml:lang`
             Content     :code:`en` :code:`de` :code:`fr` :code:`it`
@@ -96,8 +100,10 @@ Description Description of the dataset in the language defined by the :code:`xml
 Example     :code:`<dct:description xml:lang="de">Die Karte zeigt, welcher Lärmbelastung die Bevölkerung durch den Schienenverkehr ausgesetzt ist.</dct:description>`
 =========== ===
 
+:code:`dct:issued`
+------------------
+
 =========== ===
-Name        :code:`dct:issued`
 Attributes  =========== =============================================
             Name        :code:`rdf:datatype`
             Content     http://www.w3.org/2001/XMLSchema#dateTime
@@ -111,8 +117,10 @@ Description Date of the first publication of this dataset. If this date is unkno
 Example     :code:`<dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-04-26T01:00:00Z</dct:issued>`
 =========== ===
 
+:code:`dct:modified`
+--------------------
+
 =========== ===
-Name        :code:`dct:modified`
 Attributes  =========== =============================================
             Name        :code:`rdf:datatype`
             Content     http://www.w3.org/2001/XMLSchema#dateTime
@@ -125,8 +133,10 @@ Description Date of the last change (since the first publication on the portal).
 Example     :code:`<dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-06-26T00:00:00Z</dct:modified>`
 =========== ===
 
+:code:`dct:publisher`
+---------------------
+
 =========== ===
-Name        :code:`dct:publisher` 
 Elements    :code:`rdf:Description`
 Type        Nested element
 Mandatory   yes
@@ -141,8 +151,10 @@ Example     .. code:: xml
               </dct:publisher>
 =========== ===
 
+:code:`dcat:contactPoint`
+-------------------------
+
 =========== ===
-Name        :code:`dcat:contactPoint`
 Elements    :code:`vcard:Organization` 
 Type        :code:`vcard:Kind`
 Mandatory   yes
@@ -167,8 +179,10 @@ Example     .. code:: xml
               </dcat:contactPoint>
 =========== ===
 
+:code:`dcat:theme`
+------------------
+
 =========== ===
-Name        :code:`dcat:theme`
 Attributes  =========== =============================================
             Name        :code:`rdf:resource`
             Description URI to the category
@@ -206,9 +220,11 @@ Description Categorisation of the data. In the :code:`rdf:resource` attribute, t
 Example     :code:`<dcat:theme rdf:resource="http://opendata.swiss/themes/Bevoelkerung"/>`
 =========== ===
 
+:code:`dct:language`
+--------------------
+
 =========== ===
-Name        :code:`dct:language`
-Attributes  -
+Attributes  
 Type        :code:`rdfs:Literal` ISO 639-1 two-letter code
 Content     :code:`en` :code:`de` :code:`fr` :code:`it`
 Mandatory   no
@@ -219,8 +235,10 @@ Description Should contain all languages for which a distribution is available.
 Example     :code:`<dct:language>de</dct:language>`
 =========== ===
 
+:code:`dct:relation`
+--------------------
+
 =========== ===
-Name        :code:`dct:relation` 
 Elements    :code:`rdf:Description`
 Type        Nested element
 Mandatory   no
@@ -235,8 +253,10 @@ Example     .. code:: xml
               </dct:relation>
 =========== ===
 
+:code:`dcat:keyword`
+--------------------
+
 =========== ===
-Name        :code:`dcat:keyword`
 Attributes  =========== =============================================
             Name        :code:`xml:lang`
             Content     :code:`en` :code:`de` :code:`fr` :code:`it`
@@ -255,9 +275,11 @@ Example     .. code:: xml
               <dcat:keyword xml:lang="en" rdf:about="#nacht">Night</dcat:keyword>
 =========== ===
 
+:code:`dcat:landingPage`
+------------------------
+
 =========== ===
-Name        :code:`dcat:landingPage`
-Attributes  -
+Attributes  
 Type        :code:`foaf:Document` http://xmlns.com/foaf/spec/#term_Document
 Mandatory   no
 Cardinality 0..1
@@ -265,9 +287,11 @@ Description Website of the dataset with related information
 Example     :code:`<dcat:landingPage>http://www.bafu.admin.ch/laerm/index.html?lang=de</dcat:landingPage>`
 =========== ===
 
+:code:`dct:spatial`
+-------------------
+
 =========== ===
-Name        :code:`dct:spatial`
-Attributes  -
+Attributes  
 Type        :code:`dct:Location` http://dublincore.org/documents/2012/06/14/dcmi-terms/?v=terms#Location
 Mandatory   no
 Cardinality 0..n
@@ -275,9 +299,11 @@ Description Geographical classification of the dataset. Can be a description, co
 Example     :code:`<dct:spatial rdf:resource="http://publications.europa.eu/mdr/authority/country/ZWE"/>`
 =========== ===
 
+:code:`dct:temporal`
+--------------------
+
 =========== ===
-Name        :code:`dct:temporal`
-Attributes  -
+Attributes  
 Type        :code:`ct:PeriodOfTime` http://dublincore.org/documents/2012/06/14/dcmi-terms/?v=terms#terms-PeriodOfTime
 Mandatory   no
 Cardinality 0..n
@@ -295,8 +321,10 @@ Example     .. code:: xml
               </dct:temporal>
 =========== ===
 
+:code:`dct:accrualPeriodicity`
+------------------------------
+
 =========== ===
-Name        :code:`dct:accrualPeriodicity`
 Attributes  ===== =============================================
             Name  :code:`rdf:resource`
             Type  :code:`dct:Frequency`
@@ -309,9 +337,11 @@ Description The frequency in which this dataset is updated.
 Example     :code:`<dct:accrualPeriodicity rdf:resource="http://purl.org/cld/freq/daily"/>`
 =========== ===
 
+:code:`rdfs:seeAlso`
+--------------------
+
 =========== ===
-Name        :code:`rdfs:seeAlso`
-Attributes  -
+Attributes  
 Type        :code:`rdfs:Literal` http://www.w3.org/TR/rdf-schema/#ch_literal
 Mandatory   no
 Cardinality 0..n
@@ -319,9 +349,11 @@ Description Link to related datasets. Contains the identifier of the linked data
 Example     :code:`<rdfs:seeAlso>326@swisstopo</rdfs:seeAlso>`
 =========== ===
 
+:code:`dcat:distribution`
+-------------------------
+
 =========== ===
-Name        :code:`dcat:distribution`
-Attributes  -
+Attributes  
 Type        Nested elements. See `Definition of Distribution`_.
 Mandatory   no
 Cardinality 0..n
@@ -329,13 +361,15 @@ Description Distribution of the datasets.
 Example     
 =========== ===
 
-
+--------------------------
 Definition of Distribution
 --------------------------
 
+:code:`dct:identifier`
+----------------------
+
 =========== ===
-Name        :code:`dct:identifier`
-Attributes  -
+Attributes  
 Type        :code:`rdfs:Literal` http://www.w3.org/TR/rdf-schema/#ch_literal
 Mandatory   no
 Cardinality 0..1
@@ -343,8 +377,10 @@ Description Identifier of the distribution in the source system.
 Example     :code:`<dct:identifier>ch.bafu.laerm-bahnlaerm_nacht</dct:identifier>`
 =========== ===
 
+:code:`dct:title`
+-----------------
+
 =========== ===
-Name        :code:`dct:title`
 Attributes  =========== =============================================
             Name        :code:`xml:lang`
             Content     :code:`en` :code:`de` :code:`fr` :code:`it`
@@ -357,8 +393,10 @@ Description The title of the distribution in the language defined by the :code:`
 Example     :code:`<dct:title xml:lang="de">WMS (ch.bafu.laerm-bahnlaerm_nacht)</dct:title>`
 =========== ===
 
+:code:`dct:description`
+-----------------------
+
 =========== ===
-Name        :code:`dct:description`
 Attributes  =========== =============================================
             Name        :code:`xml:lang`
             Content     :code:`en` :code:`de` :code:`fr` :code:`it`
@@ -371,8 +409,10 @@ Description Description of the distribution in the language defined by the :code
 Example     :code:`<dct:description xml:lang="de">Die Angaben basieren auf flächendeckenden Modellberechnungen.</dct:description>`
 =========== ===
 
+:code:`dct:issued`
+------------------
+
 =========== ===
-Name        :code:`dct:issued`
 Attributes  =========== =============================================
             Name        :code:`rdf:datatype`
             Content     http://www.w3.org/2001/XMLSchema#dateTime
@@ -385,8 +425,10 @@ Description Date of the publication of this distribution
 Example     :code:`<dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-05-11T00:00:00Z</dct:issued>`
 =========== ===
 
+:code:`dct:modified`
+--------------------
+
 =========== ===
-Name        :code:`dct:modified`
 Attributes  =========== =============================================
             Name        :code:`rdf:datatype`
             Content     http://www.w3.org/2001/XMLSchema#dateTime
@@ -399,10 +441,11 @@ Description Date of the last change of the distribution.
 Example     :code:`<dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-04-26T00:00:00Z</dct:modified>`
 =========== ===
 
+:code:`dct:language`
+--------------------
 
 =========== ===
-Name        :code:`dct:language`
-Attributes  -
+Attributes  
 Type        :code:`rdfs:Literal` ISO 639-1 two-letter code
 Content     :code:`en` :code:`de` :code:`fr` :code:`it`
 Mandatory   no
@@ -412,8 +455,10 @@ Example     :code:`<dct:language>de</dct:language>`
 Open points What is this for exactly? The languages are defined on the fields with xml:lang already
 =========== ===
 
+:code:`dcat:accessURL`
+----------------------
+
 =========== ===
-Name        :code:`dcat:accessURL`
 Attributes  =========== =============================================
             Name        :code:`rdf:datatype`
             Content     http://www.w3.org/2001/XMLSchema#anyURI
@@ -429,8 +474,10 @@ Description URL where the distribution can be found. This could be either a down
 Example     :code:`<dcat:accessURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://wms.geo.admin.ch/</dcat:accessURL>`
 =========== ===
 
+:code:`dct:downloadURL`
+-----------------------
+
 =========== ===
-Name        :code:`dct:downloadURL`
 Attributes  =========== =============================================
             Name        :code:`rdf:datatype`
             Content     http://www.w3.org/2001/XMLSchema#anyURI
@@ -443,9 +490,11 @@ Description URL of a data file, if the distribution can be downloaded. For each 
 Example     :code:`<dcat:downloadURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://data.geo.admin.ch.s3.amazonaws.com/ch.swisstopo.swissboundaries3d-land-flaeche.fill/data.zip</dcat:downloadURL>`
 =========== ===
 
+:code:`dct:rights`
+------------------
+
 =========== ===
-Name        :code:`dct:rights`
-Attributes  - 
+Attributes   
 Type        Open Data Rights Statement Vocabulary (https://theodi.org/guides/publishers-guide-to-the-open-data-rights-statement-vocabulary)
 Mandatory   yes
 Cardinality 1..1
@@ -463,9 +512,11 @@ Example     .. code:: xml
               </dct:rights>
 =========== ===
 
+:code:`dct:license`
+-------------------
+
 =========== ===
-Name        :code:`dct:license`
-Attributes  -
+Attributes  
 Type        :code:`dct:LicenseDocument`
 Mandatory   no
 Cardinality 0..1
@@ -473,9 +524,11 @@ Description Not used, see :code:`dct:rights`
 Example     :code:`<dct:license />`
 =========== ===
 
+:code:`dcat:byteSize`
+---------------------
+
 =========== ===
-Name        :code:`dcat:byteSize`
-Attributes  -
+Attributes  
 Type        :code:`rdfs:Literal` http://www.w3.org/TR/rdf-schema/#ch_literal
 Mandatory   no - except if the distribution is available as a data download (see :code:`downloadURL`).
 Cardinality 0..1
@@ -483,9 +536,11 @@ Description Size of the data in bytes
 Example     :code:`<dcat:byteSize>1024</dcat:byteSize>`
 =========== ===
 
+:code:`dcat:mediaType`
+----------------------
+
 =========== ===
-Name        :code:`dcat:mediaType`
-Attributes  -
+Attributes  
 Type        :code:`dct:MediaTypeOrExtent` http://www.iana.org/assignments/media-types/media-types.xhtml
 Mandatory   no - except if the distribution is available as a data download (see :code:`downloadURL`).
 Cardinality 0..1
@@ -494,9 +549,11 @@ Description Only values from the list of IANA MIME types
 Example     :code:`<dcat:mediaType>text/html</dcat:mediaType>`
 =========== ===
 
+:code:`dct:format`
+------------------
+
 =========== ===
-Name        :code:`dct:format`
-Attributes  -
+Attributes  
 Type        :code:`dct:MediaTypeOrExtent`
 Mandatory   no
 Cardinality 0..1
@@ -504,9 +561,11 @@ Description Available for compatibility reasons. Not used
 Example     :code:`<dct:format/>`
 =========== ===
 
+:code:`dct:coverage`
+--------------------
+
 =========== ===
-Name        :code:`dct:coverage`
-Attributes  -
+Attributes  
 Type        :code:`dct:LocationPeriodOrJurisdiction` http://dublincore.org/documents/2012/06/14/dcmi-terms/?v=terms#LocationPeriodOrJurisdiction
 Mandatory   no
 Cardinality 0..n
@@ -518,8 +577,10 @@ Example     :code:`<dct:coverage/>`
 Common fields
 -------------
 
+:code:`rdf:Description`
+-----------------------
+
 =========== ===
-Name        :code:`rdf:Description` 
 Elements    :code:`rdfs:label`
 Attributes  =========== =============================================
             Name        :code:`rdf:about`
