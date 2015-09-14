@@ -2,8 +2,6 @@
 Use the Web Form
 ================
 
-For publishers, OPENDATA.SWISS offers three ways to add their datasets to the metadata catalogue. One of them is through a web form.
+If you have a small number of datasets (~1-20) that are updated at rare intervals, you can use our web form to upload them.
 
-I want to publish certain datasets, which are updated at rare intervals.
-----------------------------------------------------------------------------------
-**Solution ** Manually submit your metadata through a web page on OPENDATA.SWISS.
+The link to the opendata.swiss form and the information on how to use it will be published here as soon as it is known. 
