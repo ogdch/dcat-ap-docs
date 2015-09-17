@@ -368,14 +368,20 @@ Definition of Distribution
 :code:`dct:identifier`
 ----------------------
 
-=========== ===
-Attributes  
-Type        :code:`rdfs:Literal` http://www.w3.org/TR/rdf-schema/#ch_literal
-Mandatory   no
-Cardinality 0..1
-Description Identifier of the distribution in the source system.
-Example     :code:`<dct:identifier>ch.bafu.laerm-bahnlaerm_nacht</dct:identifier>`
-=========== ===
++------------+-----------------------------------------------------------------------------------+
+| Attributes |                                                                                   |                                                           
++------------+-------------+---------------------------------------------------------------------+
+| Type       | :code:`rdfs:Literal` http://www.w3.org/TR/rdf-schema/#ch_literal                  |
++------------+-----------------------------------------------------------------------------------+
+| Mandatory  | no                                                                                |
++------------+-----------------------------------------------------------------------------------+
+| Cardinality| 0..1                                                                              |
++------------+-----------------------------------------------------------------------------------+
+| Description| Identifier of the distribution in the source system.                              |
++------------+-----------------------------------------------------------------------------------+
+| Example    |  :code:`<dct:identifier>ch.bafu.laerm-bahnlaerm_nacht</dct:identifier>`           |
++------------+-----------------------------------------------------------------------------------+
+
 
 :code:`dct:title`
 -----------------
@@ -403,50 +409,76 @@ Example     :code:`<dct:identifier>ch.bafu.laerm-bahnlaerm_nacht</dct:identifier
 :code:`dct:description`
 -----------------------
 
-=========== ===
-Attributes  =========== =============================================
-            Name        :code:`xml:lang`
-            Content     :code:`en` :code:`de` :code:`fr` :code:`it`
-            Description Language of the element
-            =========== =============================================
-Type        :code:`rdfs:Literal` http://www.w3.org/TR/rdf-schema/#ch_literal
-Mandatory   no - except if the distribution does not contain all the content of the dataset
-Cardinality 1..n (one for each language)
-Description Description of the distribution in the language defined by the :code:`xml:lang` attribute
-Example     :code:`<dct:description xml:lang="de">Die Angaben basieren auf flächendeckenden Modellberechnungen.</dct:description>`
-=========== ===
++------------+-------------+---------------------------------------------------------------------+
+| Attributes | Name        | :code:`xml:lang`                                                    |                                                           
++            +-------------+---------------------------------------------------------------------+
+|            | Content     | :code:`en` :code:`de` :code:`fr` :code:`it`                         |  
++            +-------------+---------------------------------------------------------------------+
+|            | Description | Language of the element                                             |  
++------------+-------------+---------------------------------------------------------------------+
+| Type       | :code:`rdfs:Literal` http://www.w3.org/TR/rdf-schema/#ch_literal                  |
++------------+-----------------------------------------------------------------------------------+
+| Mandatory  | no - except if the distribution does not contain all the content of the dataset   |
++------------+-----------------------------------------------------------------------------------+
+| Cardinality| 0..n (one for each language)                                                      |
++------------+-----------------------------------------------------------------------------------+
+| Description| Description of the distribution in the language defined by the :code:`xml:lang`   |
+|            | attribute                                                                         |
++------------+-----------------------------------------------------------------------------------+
+| Example    |  :code:`<dct:title xml:lang="de">WMS (ch.bafu.laerm-bahnlaerm_nacht)</dct:title>` |
++------------+-----------------------------------------------------------------------------------+
 
 :code:`dct:issued`
 ------------------
 
-=========== ===
-Attributes  =========== =============================================
-            Name        :code:`rdf:datatype`
-            Content     http://www.w3.org/2001/XMLSchema#dateTime
-            Description Type of the field
-            =========== =============================================
-Type        Date and time in ISO-8601_ format
-Mandatory   yes
-Cardinality 1..1
-Description Date of the publication of this distribution
-Example     :code:`<dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-05-11T00:00:00Z</dct:issued>`
-=========== ===
++------------+-------------+---------------------------------------------------------------------+
+| Attributes | Name        | :code:`rdf:datatype`                                                |                                                           
++            +-------------+---------------------------------------------------------------------+
+|            | Content     | http://www.w3.org/2001/XMLSchema#dateTime                           |  
++            +-------------+---------------------------------------------------------------------+
+|            | Description | Type of the field                                                   |  
++------------+-------------+---------------------------------------------------------------------+
+| Type       | :Date and time in ISO-8601_ format                                                |
++------------+-----------------------------------------------------------------------------------+
+| Mandatory  | yes                                                                               |
++------------+-----------------------------------------------------------------------------------+
+| Cardinality| 1..1                                                                              |
++------------+-----------------------------------------------------------------------------------+
+| Description| Date of the publication of this distribution                                      |
++------------+-----------------------------------------------------------------------------------+
+| Example    |  .. code:: xml                                                                    |
+|            |                                                                                   |
+|            |      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">        |
+|            |        2013-05-11T00:00:00Z                                                       |
+|            |      </dct:issued>`                                                               |
++------------+-----------------------------------------------------------------------------------+
 
 :code:`dct:modified`
 --------------------
 
-=========== ===
-Attributes  =========== =============================================
-            Name        :code:`rdf:datatype`
-            Content     http://www.w3.org/2001/XMLSchema#dateTime
-            Description Type of the field
-            =========== =============================================
-Type        Date and time in ISO-8601_ format
-Mandatory   Only when the distribution has changed since the first publication. If this distribution was changed several times, this corresponds to the date of the latest change.
-Cardinality 0..1
-Description Date of the last change of the distribution.
-Example     :code:`<dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-04-26T00:00:00Z</dct:modified>`
-=========== ===
++------------+-------------+---------------------------------------------------------------------+
+| Attributes | Name        | :code:`rdf:datatype`                                                |                                                           
++            +-------------+---------------------------------------------------------------------+
+|            | Content     | http://www.w3.org/2001/XMLSchema#dateTime                           |  
++            +-------------+---------------------------------------------------------------------+
+|            | Description | Type of the field                                                   |  
++------------+-------------+---------------------------------------------------------------------+
+| Type       | :Date and time in ISO-8601_ format                                                |
++------------+-----------------------------------------------------------------------------------+
+| Mandatory  | Only when the distribution has changed since the first publication. If this       |
+|            | distribution was changed several times, this corresponds to the date of the       |
+|            | latest change.                                                                    | 
++------------+-----------------------------------------------------------------------------------+
+| Cardinality| 0..1                                                                              |
++------------+-----------------------------------------------------------------------------------+
+| Description| Date of the last change of the distribution.                                      |
++------------+-----------------------------------------------------------------------------------+
+| Example    |  .. code:: xml                                                                    |
+|            |                                                                                   |
+|            |      <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">      |
+|            |        2015-04-26T00:00:00Z                                                       |
+|            |      </dct:modified>`                                                             |
++------------+-----------------------------------------------------------------------------------+
 
 :code:`dct:language`
 --------------------
@@ -500,24 +532,60 @@ Example     :code:`<dcat:downloadURL rdf:datatype="http://www.w3.org/2001/XMLSch
 :code:`dct:rights`
 ------------------
 
-=========== ===
-Attributes   
-Type        Open Data Rights Statement Vocabulary (https://theodi.org/guides/publishers-guide-to-the-open-data-rights-statement-vocabulary)
-Mandatory   yes
-Cardinality 1..1
-Description Rights statement on this distribution. This is composed of 3 elements that can be summarized in a 
-            string literal (same concept as for the Creative Commons licenses)
-            - Source Code : Mandatory/not mandatory
-            - Non-commercial use : Allowed/not allowed
-            - Commercial use : Allowed/not allowed/only with authorization
-            
-            TODO give out exact strings
-Example     .. code:: xml
-
-              <dct:rights>
-                <odrs:dataLicence>ReferenceNotRequired-NonCommercialAllowed-CommercialAllowed</odrs:dataLicence>
-              </dct:rights>
-=========== ===
++------------+-------------+-----------------------------------------------------------------------------+
+| Elements   | Name        | :code:`odrs:dataLicense`                                                    |
++            +-------------+-----------------------------------------------------------------------------+
+|            | Content     | Possible values:                                                            |  
+|            |             |                                                                             |
+|            |             | - NonCommercialAllowed-CommercialAllowed-ReferenceNotRequired               |
+|            |             |   (**acceptable** for opendata.swiss, Open Definition compliant)            |
+|            |             | - NonCommercialAllowed-CommercialAllowed-ReferenceRequired                  |
+|            |             |   (**acceptable** for opendata.swiss, Open Definition compliant)            |
+|            |             | - NonCommercialAllowed-CommercialWithPermission-ReferenceNotRequired        |
+|            |             |   (**acceptable** for opendata.swiss)                                       |
+|            |             | - NonCommercialAllowed-CommercialWithPermission-ReferenceRequired           |
+|            |             |   (**acceptable** for opendata.swiss)                                       |
+|            |             | - NonCommercialAllowed-CommercialNotAllowed-ReferenceNotRequired            |
+|            |             |   (**not acceptable** for opendata.swiss)                                   |
+|            |             | - NonCommercialAllowed-CommercialNotAllowed-ReferenceRequired               |
+|            |             |   (**not acceptable** for opendata.swiss)                                   |
+|            |             | - NonCommercialNotAllowed-CommercialNotAllowed-ReferenceNotRequired         |
+|            |             |   (**not acceptable** for opendata.swiss)                                   |
+|            |             | - NonCommercialNotAllowed-CommercialNotAllowed-ReferenceRequired            |
+|            |             |   (**not acceptable** for opendata.swiss)                                   |
+|            |             | - NonCommercialNotAllowed-CommercialAllowed-ReferenceNotRequired            |
+|            |             |   (**not acceptable** for opendata.swiss)                                   |
+|            |             | - NonCommercialNotAllowed-CommercialAllowed-ReferenceRequired               |
+|            |             |   (**not acceptable** for opendata.swiss)                                   |
+|            |             | - NonCommercialNotAllowed-CommercialWithPermission-ReferenceNotRequired     |
+|            |             |   (**not acceptable** for opendata.swiss)                                   |
+|            |             | - NonCommercialNotAllowed-CommercialWithPermission-ReferenceRequired        |
+|            |             |   (**not acceptable** for opendata.swiss)                                   |
+|            |             |                                                                             |
++------------+-------------+-----------------------------------------------------------------------------+
+| Attributes |                                                                                           |                                                           
++------------+-------------------------------------------------------------------------------------------+
+| Type       | Open Data Rights Statement Vocabulary                                                     |
+|            | (https://theodi.org/guides/publishers-guide-to-the-open-data-rights-statement-vocabulary) |
++------------+-------------------------------------------------------------------------------------------+
+| Mandatory  | yes                                                                                       |
++------------+-------------------------------------------------------------------------------------------+
+| Cardinality| 1..1                                                                                      |
++------------+-------------------------------------------------------------------------------------------+
+| Description| Rights statement of this distribution. This is composed of 3 elements that can be         |
+|            | summarized in a string literal:                                                           |
+|            | - Non-commercial use: allowed or not allowed                                              |
+|            | - Commercial use: allowed, allowed with permission and not allowed                        |
+|            | - Reference: required or not required                                                     |
++------------+-------------------------------------------------------------------------------------------+
+| Example    |  .. code:: xml                                                                            |            
+|            |                                                                                           |           
+|            |      <dct:rights>                                                                         |          
+|            |        <odrs:dataLicence>                                                                 |
+|            |            ReferenceNotRequired-NonCommercialAllowed-CommercialAllowed                    |
+|            |        </odrs:dataLicence>                                                                |
+|            |      </dct:rights>                                                                        |           
++------------+-------------------------------------------------------------------------------------------+
 
 :code:`dct:license`
 -------------------
@@ -527,7 +595,7 @@ Attributes
 Type        :code:`dct:LicenseDocument`
 Mandatory   no
 Cardinality 0..1
-Description Not used, see :code:`dct:rights`
+Description Not used, see :code:`dct:rights`. This field ensures compatibility to other metadata standards.
 Example     :code:`<dct:license />`
 =========== ===
 
