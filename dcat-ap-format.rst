@@ -70,68 +70,95 @@ Open point  Who gives out the publisher ID ?
 :code:`dct:title`
 -----------------
 
-=========== ===
-Attributes  =========== =============================================
-            Name        :code:`xml:lang`
-            Content     :code:`en` :code:`de` :code:`fr` :code:`it`
-            Description Language of the element
-            =========== =============================================
-Type        :code:`rdfs:Literal` http://www.w3.org/TR/rdf-schema/#ch_literal
-Mandatory   yes
-Cardinality 1..n (one for each language)
-Description The title of the dataset in the language defined by the :code:`xml:lang` attribute
-Example     :code:`<dct:title xml:lang="de">Eisenbahnlärm Nacht</dct:title>`
-=========== ===
++------------+-------------+---------------------------------------------------------------------+
+| Attributes | Name        | :code:`xml:lang`                                                    | 
++            +-------------+---------------------------------------------------------------------+
+|            | Content     | :code:`en` :code:`de` :code:`fr` :code:`it`                         |  
++            +-------------+---------------------------------------------------------------------+
+|            | Description | Language of the element                                             |  
++------------+-------------+---------------------------------------------------------------------+
+| Type       | :code:`rdfs:Literal` http://www.w3.org/TR/rdf-schema/#ch_literal                  |
++------------+-----------------------------------------------------------------------------------+
+| Mandatory  | yes                                                                               |
++------------+-----------------------------------------------------------------------------------+
+| Cardinality| 1..n (one for each language)                                                      |
++------------+-----------------------------------------------------------------------------------+
+| Description| The title of the dataset in the language defined by the                           |
+|            | :code:`xml:lang` attribute                                                        |
++------------+-----------------------------------------------------------------------------------+
+| Example    | :code:`<dct:title xml:lang="de">Eisenbahnlärm Nacht</dct:title>`                  |
++------------+-----------------------------------------------------------------------------------+
 
 :code:`dct:description`
 -----------------------
 
-=========== ===
-Attributes  =========== =============================================
-            Name        :code:`xml:lang`
-            Content     :code:`en` :code:`de` :code:`fr` :code:`it`
-            Description Language of the element
-            =========== =============================================
-Type        :code:`rdfs:Literal` http://www.w3.org/TR/rdf-schema/#ch_literal
-Mandatory   yes - in all the languages in which distributions are available 
-            TODO link to distribution
-Cardinality 1..n (one for each language)
-Description Description of the dataset in the language defined by the :code:`xml:lang` attribute
-Example     :code:`<dct:description xml:lang="de">Die Karte zeigt, welcher Lärmbelastung die Bevölkerung durch den Schienenverkehr ausgesetzt ist.</dct:description>`
-=========== ===
++------------+-------------+---------------------------------------------------------------------+
+| Attributes | Name        | :code:`xml:lang`                                                    | 
++            +-------------+---------------------------------------------------------------------+
+|            | Content     | :code:`en` :code:`de` :code:`fr` :code:`it`                         |  
++            +-------------+---------------------------------------------------------------------+
+|            | Description | Language of the element                                             |  
++------------+-------------+---------------------------------------------------------------------+
+| Type       | :code:`rdfs:Literal` http://www.w3.org/TR/rdf-schema/#ch_literal                  |
++------------+-----------------------------------------------------------------------------------+
+| Mandatory  | yes - in all the languages in which distributions are available                   |
+|            | TODO link to distribution                                                         |
++------------+-----------------------------------------------------------------------------------+
+| Cardinality| 1..n (one for each language)                                                      |
++------------+-----------------------------------------------------------------------------------+
+| Description| Description of the dataset in the language defined by                             |
+|            | the :code:`xml:lang` attribute                                                    |
++------------+-----------------------------------------------------------------------------------+
+| Example    | :code:`<dct:description xml:lang="de">Die Karte zeigt, welcher Lärmbelastung      |
+|            | die Bevölkerung durch den Schienenverkehr ausgesetzt ist.</dct:description>`      |
++------------+-----------------------------------------------------------------------------------+
 
 :code:`dct:issued`
 ------------------
 
-=========== ===
-Attributes  =========== =============================================
-            Name        :code:`rdf:datatype`
-            Content     http://www.w3.org/2001/XMLSchema#dateTime
-            Description Type of the field
-            =========== =============================================
-Type        Date and time in ISO-8601_ format
-Mandatory   Can be left out if there is no distribution
-            TODO link to distribution
-Cardinality 0..1
-Description Date of the first publication of this dataset. If this date is unknown, the date of the first publication in this catalog can be used. If that date is in the future, the dataset is not displayed.
-Example     :code:`<dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-04-26T01:00:00Z</dct:issued>`
-=========== ===
++------------+-------------+---------------------------------------------------------------------+
+| Attributes | Name        | :code:`rdf:datatype`                                                | 
++            +-------------+---------------------------------------------------------------------+
+|            | Content     | http://www.w3.org/2001/XMLSchema#dateTime                           |  
++            +-------------+---------------------------------------------------------------------+
+|            | Description | Type of the field                                                   |  
++------------+-------------+---------------------------------------------------------------------+
+| Type       | Date and time in ISO-8601_ format                                                 |
++------------+-----------------------------------------------------------------------------------+
+| Mandatory  | Can be left out if there is no distribution                                       | 
+|            | TODO link to distribution                                                         |
++------------+-----------------------------------------------------------------------------------+
+| Cardinality| 0..1                                                                              |
++------------+-----------------------------------------------------------------------------------+
+| Description| Date of the first publication of this dataset. If this date is unknown, the date  |
+|            | of the first publication in this catalog can be used. If that date is in the      |
+|            | future, the dataset is not displayed.                                             |
++------------+-----------------------------------------------------------------------------------+
+| Example    | :code:`<dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">      |
+|            | 2013-04-26T01:00:00Z</dct:issued>`                                                |
++------------+-----------------------------------------------------------------------------------+
 
 :code:`dct:modified`
 --------------------
 
-=========== ===
-Attributes  =========== =============================================
-            Name        :code:`rdf:datatype`
-            Content     http://www.w3.org/2001/XMLSchema#dateTime
-            Description Type of the field
-            =========== =============================================
-Type        Date and time in ISO-8601_ format
-Mandatory   Only when the dataset has changed since the first publication.
-Cardinality 0..1
-Description Date of the last change (since the first publication on the portal).
-Example     :code:`<dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-06-26T00:00:00Z</dct:modified>`
-=========== ===
++------------+-------------+---------------------------------------------------------------------+
+| Attributes | Name        | :code:`rdf:datatype`                                                | 
++            +-------------+---------------------------------------------------------------------+
+|            | Content     | http://www.w3.org/2001/XMLSchema#dateTime                           |  
++            +-------------+---------------------------------------------------------------------+
+|            | Description | Type of the field                                                   |  
++------------+-------------+---------------------------------------------------------------------+
+| Type       | Date and time in ISO-8601_ format                                                 |
++------------+-----------------------------------------------------------------------------------+
+| Mandatory  | Only when the dataset has changed since the first publication.                    |
++------------+-----------------------------------------------------------------------------------+
+| Cardinality| 0..1                                                                              |
++------------+-----------------------------------------------------------------------------------+
+| Description| Date of the last change (since the first publication on the portal).              |
++------------+-----------------------------------------------------------------------------------+
+| Example    | :code:`<dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">    |
+|            | 2013-04-26T01:00:00Z</dct:modified>`                                              |
++------------+-----------------------------------------------------------------------------------+
 
 :code:`dct:publisher`
 ---------------------
@@ -182,43 +209,49 @@ Example     .. code:: xml
 :code:`dcat:theme`
 ------------------
 
-=========== ===
-Attributes  =========== =============================================
-            Name        :code:`rdf:resource`
-            Description URI to the category
-            =========== =============================================
-Type        :code:`skos:Concept` http://www.w3.org/2009/08/skos-reference/skos.html#Concept
-Mandatory   yes
-Cardinality 1..n
-Description Categorisation of the data. In the :code:`rdf:resource` attribute, the unique URI of the category from SKOS-RDF must be given.
-            The following values are accepted from Themes_:
++------------+-------------+---------------------------------------------------------------------+
+| Attributes | Name        | :code:`rdf:resource`                                                | 
++            +-------------+---------------------------------------------------------------------+
+|            | Description | URI to the category                                                 |  
++------------+-------------+---------------------------------------------------------------------+
+| Type       | :code:`skos:Concept` http://www.w3.org/2009/08/skos-reference/skos.html#Concept   |
++------------+-----------------------------------------------------------------------------------+
+| Mandatory  | yes                                                                               |
++------------+-----------------------------------------------------------------------------------+
+| Cardinality| 1..n                                                                              |
++------------+-----------------------------------------------------------------------------------+
+| Description| Categorisation of the data. In the :code:`rdf:resource` attribute, the unique URI |
+|            | of the category from SKOS-RDF must be given.                                      |
+|            | The following values are accepted from Themes_:                                   |
+|            |                                                                                   |
+|            |            - http://opendata.swiss/themes/Arbeit                                  |
+|            |            - http://opendata.swiss/themes/Bauwesen                                |
+|            |            - http://opendata.swiss/themes/Bevoelkerung                            |
+|            |            - http://opendata.swiss/themes/Bildung                                 |
+|            |            - http://opendata.swiss/themes/Energie                                 |
+|            |            - http://opendata.swiss/themes/Finanzen                                |
+|            |            - http://opendata.swiss/themes/Geographie                              |
+|            |            - http://opendata.swiss/themes/Gesetzgebung                            |
+|            |            - http://opendata.swiss/themes/Gesundheit                              |
+|            |            - http://opendata.swiss/themes/Handel                                  |
+|            |            - http://opendata.swiss/themes/Industrie                               |
+|            |            - http://opendata.swiss/themes/Kriminalitaet                           |
+|            |            - http://opendata.swiss/themes/Kultur                                  |
+|            |            - http://opendata.swiss/themes/Landwirtschaft                          |
+|            |            - http://opendata.swiss/themes/Mobilitaet                              |
+|            |            - http://opendata.swiss/themes/Sicherheit                              |
+|            |            - http://opendata.swiss/themes/Politik                                 |
+|            |            - http://opendata.swiss/themes/Preise                                  |
+|            |            - http://opendata.swiss/themes/Raum                                    |
+|            |            - http://opendata.swiss/themes/Soziale-Sicherheit                      |
+|            |            - http://opendata.swiss/themes/Statistische-Grundlagen                 |
+|            |            - http://opendata.swiss/themes/Tourismus                               |
+|            |            - http://opendata.swiss/themes/Verwaltung                              |
+|            |            - http://opendata.swiss/themes/Volkswirtschaft                         |
++------------+-----------------------------------------------------------------------------------+
+| Example    | :code:`<dcat:theme rdf:resource="http://opendata.swiss/themes/Bevoelkerung"/>`    |
++------------+-----------------------------------------------------------------------------------+
 
-            - http://opendata.swiss/themes/Arbeit
-            - http://opendata.swiss/themes/Bauwesen
-            - http://opendata.swiss/themes/Bevoelkerung
-            - http://opendata.swiss/themes/Bildung
-            - http://opendata.swiss/themes/Energie
-            - http://opendata.swiss/themes/Finanzen
-            - http://opendata.swiss/themes/Geographie
-            - http://opendata.swiss/themes/Gesetzgebung
-            - http://opendata.swiss/themes/Gesundheit
-            - http://opendata.swiss/themes/Handel
-            - http://opendata.swiss/themes/Industrie
-            - http://opendata.swiss/themes/Kriminalitaet
-            - http://opendata.swiss/themes/Kultur
-            - http://opendata.swiss/themes/Landwirtschaft
-            - http://opendata.swiss/themes/Mobilitaet
-            - http://opendata.swiss/themes/Sicherheit
-            - http://opendata.swiss/themes/Politik
-            - http://opendata.swiss/themes/Preise
-            - http://opendata.swiss/themes/Raum
-            - http://opendata.swiss/themes/Soziale-Sicherheit
-            - http://opendata.swiss/themes/Statistische-Grundlagen
-            - http://opendata.swiss/themes/Tourismus
-            - http://opendata.swiss/themes/Verwaltung
-            - http://opendata.swiss/themes/Volkswirtschaft
-Example     :code:`<dcat:theme rdf:resource="http://opendata.swiss/themes/Bevoelkerung"/>`
-=========== ===
 
 :code:`dct:language`
 --------------------
@@ -256,24 +289,29 @@ Example     .. code:: xml
 :code:`dcat:keyword`
 --------------------
 
-=========== ===
-Attributes  =========== =============================================
-            Name        :code:`xml:lang`
-            Content     :code:`en` :code:`de` :code:`fr` :code:`it`
-            Description Language of the element
-            =========== =============================================
-Type        :code:`rdfs:Literal` http://www.w3.org/TR/rdf-schema/#ch_literal
-Mandatory   no
-Cardinality 0..n
-Description Keyword who describe that dataset. 
-            TODO check if TERMDAT is there
-Example     .. code:: xml
-
-              <dcat:keyword xml:lang="de" rdf:about="#nacht">Nacht</dcat:keyword>
-              <dcat:keyword xml:lang="fr" rdf:about="#nacht">Nuit</dcat:keyword>
-              <dcat:keyword xml:lang="it" rdf:about="#nacht">Noche</dcat:keyword>
-              <dcat:keyword xml:lang="en" rdf:about="#nacht">Night</dcat:keyword>
-=========== ===
++------------+-------------+---------------------------------------------------------------------+
+| Attributes | Name        | :code:`xml:lang`                                                    | 
++            +-------------+---------------------------------------------------------------------+
+|            | Content     | :code:`en` :code:`de` :code:`fr` :code:`it`                         |  
++            +-------------+---------------------------------------------------------------------+
+|            | Description | Language of the element                                             |  
++------------+-------------+---------------------------------------------------------------------+
+| Type       | :code:`rdfs:Literal` http://www.w3.org/TR/rdf-schema/#ch_literal                  |
++------------+-----------------------------------------------------------------------------------+
+| Mandatory  | no                                                                                |
++------------+-----------------------------------------------------------------------------------+
+| Cardinality| 0..n                                                                              |
++------------+-----------------------------------------------------------------------------------+
+| Description| Keyword who describe that dataset.                                                |
+|            | TODO check if TERMDAT is there                                                    |
++------------+-----------------------------------------------------------------------------------+
+| Example    | .. code:: xml                                                                     |
+|            |                                                                                   |
+|            |   <dcat:keyword xml:lang="de" rdf:about="#nacht">Nacht</dcat:keyword>             |
+|            |   <dcat:keyword xml:lang="fr" rdf:about="#nacht">Nuit</dcat:keyword>              |
+|            |   <dcat:keyword xml:lang="it" rdf:about="#nacht">Noche</dcat:keyword>             |
+|            |   <dcat:keyword xml:lang="en" rdf:about="#nacht">Night</dcat:keyword>             |
++------------+-----------------------------------------------------------------------------------+
 
 :code:`dcat:landingPage`
 ------------------------
@@ -369,8 +407,8 @@ Definition of Distribution
 ----------------------
 
 +------------+-----------------------------------------------------------------------------------+
-| Attributes |                                                                                   |                                                           
-+------------+-------------+---------------------------------------------------------------------+
+| Attributes |                                                                                   |
++------------+-----------------------------------------------------------------------------------+
 | Type       | :code:`rdfs:Literal` http://www.w3.org/TR/rdf-schema/#ch_literal                  |
 +------------+-----------------------------------------------------------------------------------+
 | Mandatory  | no                                                                                |
@@ -387,7 +425,7 @@ Definition of Distribution
 -----------------
 
 +------------+-------------+---------------------------------------------------------------------+
-| Attributes | Name        | :code:`xml:lang`                                                    |                                                           
+| Attributes | Name        | :code:`xml:lang`                                                    | 
 +            +-------------+---------------------------------------------------------------------+
 |            | Content     | :code:`en` :code:`de` :code:`fr` :code:`it`                         |  
 +            +-------------+---------------------------------------------------------------------+
@@ -410,7 +448,7 @@ Definition of Distribution
 -----------------------
 
 +------------+-------------+---------------------------------------------------------------------+
-| Attributes | Name        | :code:`xml:lang`                                                    |                                                           
+| Attributes | Name        | :code:`xml:lang`                                                    |
 +            +-------------+---------------------------------------------------------------------+
 |            | Content     | :code:`en` :code:`de` :code:`fr` :code:`it`                         |  
 +            +-------------+---------------------------------------------------------------------+
@@ -432,7 +470,7 @@ Definition of Distribution
 ------------------
 
 +------------+-------------+---------------------------------------------------------------------+
-| Attributes | Name        | :code:`rdf:datatype`                                                |                                                           
+| Attributes | Name        | :code:`rdf:datatype`                                                |
 +            +-------------+---------------------------------------------------------------------+
 |            | Content     | http://www.w3.org/2001/XMLSchema#dateTime                           |  
 +            +-------------+---------------------------------------------------------------------+
@@ -457,7 +495,7 @@ Definition of Distribution
 --------------------
 
 +------------+-------------+---------------------------------------------------------------------+
-| Attributes | Name        | :code:`rdf:datatype`                                                |                                                           
+| Attributes | Name        | :code:`rdf:datatype`                                                |       
 +            +-------------+---------------------------------------------------------------------+
 |            | Content     | http://www.w3.org/2001/XMLSchema#dateTime                           |  
 +            +-------------+---------------------------------------------------------------------+
@@ -497,37 +535,51 @@ Open points What is this for exactly? The languages are defined on the fields wi
 :code:`dcat:accessURL`
 ----------------------
 
-=========== ===
-Attributes  =========== =============================================
-            Name        :code:`rdf:datatype`
-            Content     http://www.w3.org/2001/XMLSchema#anyURI
-            Description Type of the field
-            =========== =============================================
-Type        http://www.w3.org/2001/XMLSchema#anyURI
-Mandatory   yes
-Cardinality 1..n
-Description URL where the distribution can be found. This could be either a download URL, 
-            a API URL or a landing page URL. If the distribution is only available through 
-            a landing page, this field must contain the URL of the landing page.
-            If a downloadURL was given for this distribution, this field has to contain the same value.
-Example     :code:`<dcat:accessURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://wms.geo.admin.ch/</dcat:accessURL>`
-=========== ===
++------------+-------------+---------------------------------------------------------------------+
+| Attributes | Name        | :code:`rdf:datatype`                                                | 
++            +-------------+---------------------------------------------------------------------+
+|            | Content     | http://www.w3.org/2001/XMLSchema#anyURI                             |  
++            +-------------+---------------------------------------------------------------------+
+|            | Description | Type of the field                                                   |  
++------------+-------------+---------------------------------------------------------------------+
+| Type       | http://www.w3.org/2001/XMLSchema#anyURI                                           |
++------------+-----------------------------------------------------------------------------------+
+| Mandatory  | yes                                                                               |
++------------+-----------------------------------------------------------------------------------+
+| Cardinality| 1..n                                                                              |
++------------+-----------------------------------------------------------------------------------+
+| Description| URL where the distribution can be found. This could be either a download URL,     |
+|            | a API URL or a landing page URL. If the distribution is only available through    |
+|            | a landing page, this field must contain the URL of the landing page.              |
+|            | If a downloadURL was given for this distribution, this field has to contain the   |
+|            | same value.                                                                       |
++------------+-----------------------------------------------------------------------------------+
+| Example    | :code:`<dcat:accessURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">    |
+|            | http://wms.geo.admin.ch/</dcat:accessURL>`                                        |
++------------+-----------------------------------------------------------------------------------+
 
 :code:`dct:downloadURL`
 -----------------------
 
-=========== ===
-Attributes  =========== =============================================
-            Name        :code:`rdf:datatype`
-            Content     http://www.w3.org/2001/XMLSchema#anyURI
-            Description Type of the field
-            =========== =============================================
-Type        http://www.w3.org/2001/XMLSchema#anyURI
-Mandatory   no
-Cardinality 0..n
-Description URL of a data file, if the distribution can be downloaded. For each of these, a :code:`dcat:accessURL` has to exist.
-Example     :code:`<dcat:downloadURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://data.geo.admin.ch.s3.amazonaws.com/ch.swisstopo.swissboundaries3d-land-flaeche.fill/data.zip</dcat:downloadURL>`
-=========== ===
++------------+-------------+---------------------------------------------------------------------+
+| Attributes | Name        | :code:`rdf:datatype`                                                | 
++            +-------------+---------------------------------------------------------------------+
+|            | Content     | http://www.w3.org/2001/XMLSchema#anyURI                             |  
++            +-------------+---------------------------------------------------------------------+
+|            | Description | Type of the field                                                   |  
++------------+-------------+---------------------------------------------------------------------+
+| Type       | http://www.w3.org/2001/XMLSchema#anyURI                                           |
++------------+-----------------------------------------------------------------------------------+
+| Mandatory  | no                                                                                |
++------------+-----------------------------------------------------------------------------------+
+| Cardinality| 0..n                                                                              |
++------------+-----------------------------------------------------------------------------------+
+| Description| URL of a data file, if the distribution can be downloaded. For each of these,     |
+|            | a :code:`dcat:accessURL` has to exist.                                            |
++------------+-----------------------------------------------------------------------------------+
+| Example    | :code:`<dcat:downloadURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">  |
+|            | http://data.geo.admin.ch.s3.amazonaws.com/ch.fill/data.zip</dcat:downloadURL>`    |
++------------+-----------------------------------------------------------------------------------+
 
 :code:`dct:rights`
 ------------------
@@ -563,7 +615,7 @@ Example     :code:`<dcat:downloadURL rdf:datatype="http://www.w3.org/2001/XMLSch
 |            |             |   (**not acceptable** for opendata.swiss)                                   |
 |            |             |                                                                             |
 +------------+-------------+-----------------------------------------------------------------------------+
-| Attributes |                                                                                           |                                                           
+| Attributes |                                                                                           |
 +------------+-------------------------------------------------------------------------------------------+
 | Type       | Open Data Rights Statement Vocabulary                                                     |
 |            | (https://theodi.org/guides/publishers-guide-to-the-open-data-rights-statement-vocabulary) |
@@ -655,17 +707,21 @@ Common fields
 :code:`rdf:Description`
 -----------------------
 
-=========== ===
-Elements    :code:`rdfs:label`
-Attributes  =========== =============================================
-            Name        :code:`rdf:about`
-            Mandatory   No
-            =========== =============================================
-Type        Sub-element
-Mandatory   yes
-Cardinality 1..1
-Description The description of the dataset/distribution
-=========== ===
++------------+-------------+---------------------------------------------------------------------+
+| Elements   | :code:`rdfs:label`                                                                |
++------------+-------------+---------------------------------------------------------------------+
+| Attributes | Name        | :code:`rdf:about`                                                   | 
++            +-------------+---------------------------------------------------------------------+
+|            | Mandatory   | No                                                                  |  
++------------+-------------+---------------------------------------------------------------------+
+| Type       | Sub-element                                                                       |
++------------+-----------------------------------------------------------------------------------+
+| Mandatory  | yes                                                                               |
++------------+-----------------------------------------------------------------------------------+
+| Cardinality| 1..1                                                                              |
++------------+-----------------------------------------------------------------------------------+
+| Description| The description of the dataset/distribution                                       |
++------------+-----------------------------------------------------------------------------------+
 
 
 .. _Themes: https://github.com/ogdch/ckanext-switzerland/blob/master/opendataswiss-themes.rdf
