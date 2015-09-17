@@ -700,7 +700,7 @@ Description Distributions can be classified by their location or time period (fo
 Example     :code:`<dct:coverage/>`
 =========== ===
 
-
+-------------
 Common fields
 -------------
 
