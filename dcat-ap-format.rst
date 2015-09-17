@@ -380,18 +380,25 @@ Example     :code:`<dct:identifier>ch.bafu.laerm-bahnlaerm_nacht</dct:identifier
 :code:`dct:title`
 -----------------
 
-=========== ===
-Attributes  =========== =============================================
-            Name        :code:`xml:lang`
-            Content     :code:`en` :code:`de` :code:`fr` :code:`it`
-            Description Language of the element
-            =========== =============================================
-Type        :code:`rdfs:Literal` http://www.w3.org/TR/rdf-schema/#ch_literal
-Mandatory   no - except if the distribution does not contain all the content of the dataset
-Cardinality 0..n (one for each language)
-Description The title of the distribution in the language defined by the :code:`xml:lang` attribute. If this element is left out, the :code:`dct:title` of the dataset is used instead
-Example     :code:`<dct:title xml:lang="de">WMS (ch.bafu.laerm-bahnlaerm_nacht)</dct:title>`
-=========== ===
++------------+-------------+---------------------------------------------------------------------+
+| Attributes | Name        | :code:`xml:lang`                                                    |                                                           
++            +-------------+---------------------------------------------------------------------+
+|            | Content     | :code:`en` :code:`de` :code:`fr` :code:`it`                         |  
++            +-------------+---------------------------------------------------------------------+
+|            | Description | Language of the element                                             |  
++------------+-------------+---------------------------------------------------------------------+
+| Type       | :code:`rdfs:Literal` http://www.w3.org/TR/rdf-schema/#ch_literal                  |
++------------+-----------------------------------------------------------------------------------+
+| Mandatory  | no - except if the distribution does not contain all the content of the dataset   |
++------------+-----------------------------------------------------------------------------------+
+| Cardinality| 0..n (one for each language)                                                      |
++------------+-----------------------------------------------------------------------------------+
+| Description| The title of the distribution in the language defined by the :code:`xml:lang`     |
+|            | attribute. If this element is left out, the :code:`dct:title` of the dataset is   |
+|            | used instead                                                                      |
++------------+-----------------------------------------------------------------------------------+
+| Example    |  :code:`<dct:title xml:lang="de">WMS (ch.bafu.laerm-bahnlaerm_nacht)</dct:title>` |
++------------+-----------------------------------------------------------------------------------+
 
 :code:`dct:description`
 -----------------------
