@@ -224,30 +224,30 @@ Example     .. code:: xml
 |            | of the category from SKOS-RDF must be given.                                      |
 |            | The following values are accepted from Themes_:                                   |
 |            |                                                                                   |
-|            |            - http://opendata.swiss/themes/Arbeit                                  |
-|            |            - http://opendata.swiss/themes/Bauwesen                                |
-|            |            - http://opendata.swiss/themes/Bevoelkerung                            |
-|            |            - http://opendata.swiss/themes/Bildung                                 |
-|            |            - http://opendata.swiss/themes/Energie                                 |
-|            |            - http://opendata.swiss/themes/Finanzen                                |
-|            |            - http://opendata.swiss/themes/Geographie                              |
-|            |            - http://opendata.swiss/themes/Gesetzgebung                            |
-|            |            - http://opendata.swiss/themes/Gesundheit                              |
-|            |            - http://opendata.swiss/themes/Handel                                  |
-|            |            - http://opendata.swiss/themes/Industrie                               |
-|            |            - http://opendata.swiss/themes/Kriminalitaet                           |
-|            |            - http://opendata.swiss/themes/Kultur                                  |
-|            |            - http://opendata.swiss/themes/Landwirtschaft                          |
-|            |            - http://opendata.swiss/themes/Mobilitaet                              |
-|            |            - http://opendata.swiss/themes/Sicherheit                              |
-|            |            - http://opendata.swiss/themes/Politik                                 |
-|            |            - http://opendata.swiss/themes/Preise                                  |
-|            |            - http://opendata.swiss/themes/Raum                                    |
-|            |            - http://opendata.swiss/themes/Soziale-Sicherheit                      |
-|            |            - http://opendata.swiss/themes/Statistische-Grundlagen                 |
-|            |            - http://opendata.swiss/themes/Tourismus                               |
-|            |            - http://opendata.swiss/themes/Verwaltung                              |
-|            |            - http://opendata.swiss/themes/Volkswirtschaft                         |
+|            |            - http://opendata.swiss/themes/work                                    |
+|            |            - http://opendata.swiss/themes/construction                            |
+|            |            - http://opendata.swiss/themes/population                              |
+|            |            - http://opendata.swiss/themes/education                               |
+|            |            - http://opendata.swiss/themes/energy                                  |
+|            |            - http://opendata.swiss/themes/finances                                |
+|            |            - http://opendata.swiss/themes/geography                               |
+|            |            - http://opendata.swiss/themes/legislation                             |
+|            |            - http://opendata.swiss/themes/health                                  |
+|            |            - http://opendata.swiss/themes/trade                                   |
+|            |            - http://opendata.swiss/themes/industry                                |
+|            |            - http://opendata.swiss/themes/crime                                   |
+|            |            - http://opendata.swiss/themes/culture                                 |
+|            |            - http://opendata.swiss/themes/agriculture                             |
+|            |            - http://opendata.swiss/themes/mobility                                |
+|            |            - http://opendata.swiss/themes/public-order                            |
+|            |            - http://opendata.swiss/themes/politics                                |
+|            |            - http://opendata.swiss/themes/prices                                  |
+|            |            - http://opendata.swiss/themes/territory                               |
+|            |            - http://opendata.swiss/themes/social-security                         |
+|            |            - http://opendata.swiss/themes/statistical-basis                       |
+|            |            - http://opendata.swiss/themes/tourism                                 |
+|            |            - http://opendata.swiss/themes/administration                          |
+|            |            - http://opendata.swiss/themes/national-economy                        |
 +------------+-----------------------------------------------------------------------------------+
 | Example    | :code:`<dcat:theme rdf:resource="http://opendata.swiss/themes/Bevoelkerung"/>`    |
 +------------+-----------------------------------------------------------------------------------+
