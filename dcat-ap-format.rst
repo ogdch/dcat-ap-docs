@@ -249,7 +249,7 @@ Example     .. code:: xml
 |            |            - http://opendata.swiss/themes/administration                          |
 |            |            - http://opendata.swiss/themes/national-economy                        |
 +------------+-----------------------------------------------------------------------------------+
-| Example    | :code:`<dcat:theme rdf:resource="http://opendata.swiss/themes/Bevoelkerung"/>`    |
+| Example    | :code:`<dcat:theme rdf:resource="http://opendata.swiss/themes/population"/>`      |
 +------------+-----------------------------------------------------------------------------------+
 
 
