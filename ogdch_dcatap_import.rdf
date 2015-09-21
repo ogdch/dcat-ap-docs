@@ -44,8 +44,8 @@
         <vcard:hasEmail rdf:resource="mailto:heinz@bafu.admin.ch"/>
       </vcard:Individual>
     </dcat:contactPoint>
-    <dcat:theme rdf:resource="http://opendata.swiss/themes/Bevoelkerung"/>
-    <dcat:theme rdf:resource="http://opendata.swiss/themes/Raum"/>
+    <dcat:theme rdf:resource="http://opendata.swiss/themes/population"/>
+    <dcat:theme rdf:resource="http://opendata.swiss/themes/territory"/>
     <dct:language>de</dct:language>
     <dct:language>en</dct:language>
     <dct:relation>
@@ -91,9 +91,7 @@
       <dcat:accessURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://wms.geo.admin.ch/</dcat:accessURL>
       <dcat:downloadURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://data.geo.admin.ch.s3.amazonaws.com/ch.swisstopo.swissboundaries3d-land-flaeche.fill/data.zip</dcat:downloadURL>
       <dct:rights>
-        <odrs:dataLicence>reference_not-required</odrs:dataLicence>
-        <odrs:dataLicence>non-commercial_allowed</odrs:dataLicence>
-        <odrs:dataLicence>commercial_allowed</odrs:dataLicence>
+        <odrs:dataLicence>NonCommercialAllowed-CommercialAllowed-ReferenceNotRequired</odrs:dataLicence>
       </dct:rights>
       <dct:license/>
       <dcat:byteSize>1024</dcat:byteSize>
