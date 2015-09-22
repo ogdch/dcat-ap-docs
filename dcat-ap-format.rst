@@ -634,7 +634,7 @@ Open points What is this for exactly? The languages are defined on the fields wi
 |            |                                                                                           |           
 |            |      <dct:rights>                                                                         |          
 |            |        <odrs:dataLicence>                                                                 |
-|            |            ReferenceNotRequired-NonCommercialAllowed-CommercialAllowed                    |
+|            |            NonCommercialAllowed-CommercialAllowed-ReferenceNotRequired                    |
 |            |        </odrs:dataLicence>                                                                |
 |            |      </dct:rights>                                                                        |           
 +------------+-------------------------------------------------------------------------------------------+
