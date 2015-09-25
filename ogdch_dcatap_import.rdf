@@ -116,11 +116,6 @@
         <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-04-26T01:00:00Z</dct:issued>
         <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-04-26T00:00:00Z</dct:modified>
         <dct:publisher>
-          <rdf:Description rdf:about="Verweis auf TERMDAT-Eintrag">
-            <rdfs:label>Bundesamt für Landestopografie swisstopo</rdfs:label>
-          </rdf:Description>
-        </dct:publisher>
-        <dct:publisher>
           <rdf:Description>
             <rdfs:label>Bundesamt für Landestopografie swisstopo</rdfs:label>
           </rdf:Description>
@@ -154,7 +149,7 @@
             <schema:endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-12-31</schema:endDate>
           </dct:PeriodOfTime>
         </dct:temporal>
-        <dct:accrualPeriodicity rdf:resource="http://purl.org/cld/freq/yearly"/>
+        <dct:accrualPeriodicity rdf:resource="http://purl.org/cld/freq/annual"/>
         <rdfs:seeAlso>87986@swisstopo</rdfs:seeAlso>
         <dcat:distribution>
           <dct:identifier>swissboundaries3d-land-flaeche</dct:identifier>
