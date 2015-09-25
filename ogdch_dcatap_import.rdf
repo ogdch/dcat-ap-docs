@@ -160,9 +160,26 @@
             <odrs:dataLicence>NonCommercialAllowed-CommercialAllowed-ReferenceNotRequired</odrs:dataLicence>
           </dct:rights>
           <dct:license/>
-          <dcat:byteSize>1024</dcat:byteSize>
+          <dcat:byteSize>209870</dcat:byteSize>
           <dcat:mediaType>application/zip</dcat:mediaType>
           <dct:format>Shapefile</dct:format>
+          <dct:coverage/>
+        </dcat:distribution>
+        <dcat:distribution>
+          <dct:title xml:lang="de">ReadMe</dct:title>
+          <dct:title xml:lang="fr">ReadMe</dct:title>
+          <dct:title xml:lang="it">ReadMe</dct:title>
+          <dct:title xml:lang="en">ReadMe</dct:title>
+          <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-12-31T00:00:00Z</dct:issued>
+          <dcat:accessURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://data.geo.admin.ch.s3.amazonaws.com/ch.swisstopo.swissboundaries3d-land-flaeche.fill/readme.txt</dcat:accessURL>
+          <dcat:downloadURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://data.geo.admin.ch.s3.amazonaws.com/ch.swisstopo.swissboundaries3d-land-flaeche.fill/readme.txt</dcat:downloadURL>
+          <dct:rights>
+            <odrs:dataLicence>NonCommercialAllowed-CommercialAllowed-ReferenceNotRequired</odrs:dataLicence>
+          </dct:rights>
+          <dct:license/>
+          <dcat:byteSize>1389</dcat:byteSize>
+          <dcat:mediaType>text/plain</dcat:mediaType>
+          <dct:format/>
           <dct:coverage/>
         </dcat:distribution>
       </dcat:Dataset>
