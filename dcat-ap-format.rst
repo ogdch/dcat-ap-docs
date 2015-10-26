@@ -168,11 +168,11 @@ Elements    :code:`rdf:Description`
 Type        Nested element
 Mandatory   yes
 Cardinality 1..n
-Description The publishers of the dataset. The :code:`rdf:about` attribute in the description must reference a TERMDAT
+Description The publishers of the dataset. :code:`rdf:about` is an optional attribute that may contain a TERMDAT reference
 Example     .. code:: xml
 
               <dct:publisher>
-                <rdf:Description rdf:about="Verweis auf TERMDAT-Eintrag">
+                <rdf:Description rdf:about="Reference to TERMAT-Entry">
                   <rdfs:label>Bundesamt für Landestopografie swisstopo</rdfs:label>
                 </rdf:Description>
               </dct:publisher>
