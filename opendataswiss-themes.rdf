@@ -83,7 +83,7 @@
     <rdf:Description rdf:about="http://opendata.swiss/themes/legislation">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:prefLabel xml:lang="de">Gesetzgebung</skos:prefLabel>
-        <skos:prefLabel xml:lang="fr">Legislation</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Législation</skos:prefLabel>
         <skos:prefLabel xml:lang="it">Legislazione</skos:prefLabel>
         <skos:prefLabel xml:lang="en">Legislation</skos:prefLabel>
         <skos:definition xml:lang="de"></skos:definition>
