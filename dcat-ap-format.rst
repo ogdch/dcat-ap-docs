@@ -70,19 +70,21 @@ Open point  Who gives out the publisher ID ?
 :code:`dct:title`
 -----------------
 
++------------+-----------------------------------------------------------------------------------+
+| Type       | :code:`rdfs:Literal` http://www.w3.org/TR/rdf-schema/#ch_literal                  |
++------------+-----------------------------------------------------------------------------------+
+| Mandatory  | yes                                                                               |
++------------+-----------------------------------------------------------------------------------+
+| Cardinality| 1..n (one for each language)                                                      |
 +------------+-------------+---------------------------------------------------------------------+
 | Attributes | Name        | :code:`xml:lang`                                                    | 
 +            +-------------+---------------------------------------------------------------------+
 |            | Content     | :code:`en` :code:`de` :code:`fr` :code:`it`                         |  
 +            +-------------+---------------------------------------------------------------------+
 |            | Description | Language of the element                                             |  
++            +-------------+---------------------------------------------------------------------+
+|            | Mandatory   | yes                                                                 |  
 +------------+-------------+---------------------------------------------------------------------+
-| Type       | :code:`rdfs:Literal` http://www.w3.org/TR/rdf-schema/#ch_literal                  |
-+------------+-----------------------------------------------------------------------------------+
-| Mandatory  | yes                                                                               |
-+------------+-----------------------------------------------------------------------------------+
-| Cardinality| 1..n (one for each language)                                                      |
-+------------+-----------------------------------------------------------------------------------+
 | Description| The title of the dataset in the language defined by the                           |
 |            | :code:`xml:lang` attribute                                                        |
 +------------+-----------------------------------------------------------------------------------+
@@ -92,20 +94,22 @@ Open point  Who gives out the publisher ID ?
 :code:`dct:description`
 -----------------------
 
-+------------+-------------+---------------------------------------------------------------------+
-| Attributes | Name        | :code:`xml:lang`                                                    | 
-+            +-------------+---------------------------------------------------------------------+
-|            | Content     | :code:`en` :code:`de` :code:`fr` :code:`it`                         |  
-+            +-------------+---------------------------------------------------------------------+
-|            | Description | Language of the element                                             |  
-+------------+-------------+---------------------------------------------------------------------+
++------------+-----------------------------------------------------------------------------------+
 | Type       | :code:`rdfs:Literal` http://www.w3.org/TR/rdf-schema/#ch_literal                  |
 +------------+-----------------------------------------------------------------------------------+
 | Mandatory  | yes - in all the languages in which distributions are available                   |
 |            | TODO link to distribution                                                         |
 +------------+-----------------------------------------------------------------------------------+
 | Cardinality| 1..n (one for each language)                                                      |
-+------------+-----------------------------------------------------------------------------------+
++------------+-------------+---------------------------------------------------------------------+
+| Attributes | Name        | :code:`xml:lang`                                                    | 
++            +-------------+---------------------------------------------------------------------+
+|            | Content     | :code:`en` :code:`de` :code:`fr` :code:`it`                         |  
++            +-------------+---------------------------------------------------------------------+
+|            | Description | Language of the element                                             |  
++            +-------------+---------------------------------------------------------------------+
+|            | Mandatory   | yes                                                                 |  
++------------+-------------+---------------------------------------------------------------------+
 | Description| Description of the dataset in the language defined by                             |
 |            | the :code:`xml:lang` attribute                                                    |
 +------------+-----------------------------------------------------------------------------------+
@@ -116,20 +120,22 @@ Open point  Who gives out the publisher ID ?
 :code:`dct:issued`
 ------------------
 
-+------------+-------------+---------------------------------------------------------------------+
-| Attributes | Name        | :code:`rdf:datatype`                                                | 
-+            +-------------+---------------------------------------------------------------------+
-|            | Content     | http://www.w3.org/2001/XMLSchema#dateTime                           |  
-+            +-------------+---------------------------------------------------------------------+
-|            | Description | Type of the field                                                   |  
-+------------+-------------+---------------------------------------------------------------------+
++------------+-----------------------------------------------------------------------------------+
 | Type       | Date and time in ISO-8601_ format                                                 |
 +------------+-----------------------------------------------------------------------------------+
 | Mandatory  | Can be left out if there is no distribution                                       | 
 |            | TODO link to distribution                                                         |
 +------------+-----------------------------------------------------------------------------------+
 | Cardinality| 0..1                                                                              |
-+------------+-----------------------------------------------------------------------------------+
++------------+-------------+---------------------------------------------------------------------+
+| Attributes | Name        | :code:`rdf:datatype`                                                | 
++            +-------------+---------------------------------------------------------------------+
+|            | Content     | http://www.w3.org/2001/XMLSchema#dateTime                           |  
++            +-------------+---------------------------------------------------------------------+
+|            | Description | Type of the field                                                   |  
++            +-------------+---------------------------------------------------------------------+
+|            | Mandatory   | yes                                                                 |  
++------------+-------------+---------------------------------------------------------------------+
 | Description| Date of the first publication of this dataset. If this date is unknown, the date  |
 |            | of the first publication in this catalog can be used. If that date is in the      |
 |            | future, the dataset is not displayed.                                             |
@@ -141,19 +147,21 @@ Open point  Who gives out the publisher ID ?
 :code:`dct:modified`
 --------------------
 
++------------+-----------------------------------------------------------------------------------+
+| Type       | Date and time in ISO-8601_ format                                                 |
++------------+-----------------------------------------------------------------------------------+
+| Mandatory  | Only when the dataset has changed since the first publication.                    |
++------------+-----------------------------------------------------------------------------------+
+| Cardinality| 0..1                                                                              |
 +------------+-------------+---------------------------------------------------------------------+
 | Attributes | Name        | :code:`rdf:datatype`                                                | 
 +            +-------------+---------------------------------------------------------------------+
 |            | Content     | http://www.w3.org/2001/XMLSchema#dateTime                           |  
 +            +-------------+---------------------------------------------------------------------+
 |            | Description | Type of the field                                                   |  
++            +-------------+---------------------------------------------------------------------+
+|            | Mandatory   | yes                                                                 |  
 +------------+-------------+---------------------------------------------------------------------+
-| Type       | Date and time in ISO-8601_ format                                                 |
-+------------+-----------------------------------------------------------------------------------+
-| Mandatory  | Only when the dataset has changed since the first publication.                    |
-+------------+-----------------------------------------------------------------------------------+
-| Cardinality| 0..1                                                                              |
-+------------+-----------------------------------------------------------------------------------+
 | Description| Date of the last change (since the first publication on the portal).              |
 +------------+-----------------------------------------------------------------------------------+
 | Example    | :code:`<dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">    |
@@ -209,17 +217,19 @@ Example     .. code:: xml
 :code:`dcat:theme`
 ------------------
 
-+------------+-------------+---------------------------------------------------------------------+
-| Attributes | Name        | :code:`rdf:resource`                                                | 
-+            +-------------+---------------------------------------------------------------------+
-|            | Description | URI to the category                                                 |  
-+------------+-------------+---------------------------------------------------------------------+
++------------+-----------------------------------------------------------------------------------+
 | Type       | :code:`skos:Concept` http://www.w3.org/2009/08/skos-reference/skos.html#Concept   |
 +------------+-----------------------------------------------------------------------------------+
 | Mandatory  | yes                                                                               |
 +------------+-----------------------------------------------------------------------------------+
 | Cardinality| 1..n                                                                              |
-+------------+-----------------------------------------------------------------------------------+
++------------+-------------+---------------------------------------------------------------------+
+| Attributes | Name        | :code:`rdf:resource`                                                | 
++            +-------------+---------------------------------------------------------------------+
+|            | Description | URI to the category                                                 |  
++            +-------------+---------------------------------------------------------------------+
+|            | Mandatory   | yes                                                                 |  
++------------+-------------+---------------------------------------------------------------------+
 | Description| Categorisation of the data. In the :code:`rdf:resource` attribute, the unique URI |
 |            | of the category from SKOS-RDF must be given.                                      |
 |            | The following values are accepted from Themes_:                                   |
@@ -257,11 +267,11 @@ Example     .. code:: xml
 --------------------
 
 =========== ===
-Attributes  
 Type        :code:`rdfs:Literal` ISO 639-1 two-letter code
 Content     :code:`en` :code:`de` :code:`fr` :code:`it`
 Mandatory   no
 Cardinality 0..n (for each language)
+Attributes  
 Description Should contain all languages for which a distribution is available. 
             This field is not validated and is used for display purposes.
             If all distributions are language-independant, this field can be left out.
@@ -289,7 +299,7 @@ Example     .. code:: xml
 :code:`dcat:keyword`
 --------------------
 
-+------------+-------------+---------------------------------------------------------------------+
++------------+-----------------------------------------------------------------------------------+
 | Type       | :code:`rdfs:Literal` http://www.w3.org/TR/rdf-schema/#ch_literal                  |
 +------------+-----------------------------------------------------------------------------------+
 | Mandatory  | no                                                                                |
@@ -303,7 +313,7 @@ Example     .. code:: xml
 |            | Description | Language of the element                                             |  
 +            +-------------+---------------------------------------------------------------------+
 |            | Mandatory   | yes                                                                 |  
-+------------+-----------------------------------------------------------------------------------+
++------------+-------------+---------------------------------------------------------------------+
 | Description| Keyword who describe that dataset.                                                |
 +------------+-----------------------------------------------------------------------------------+
 | Example    | .. code:: xml                                                                     |
@@ -318,10 +328,10 @@ Example     .. code:: xml
 ------------------------
 
 =========== ===
-Attributes  
 Type        :code:`foaf:Document` http://xmlns.com/foaf/spec/#term_Document
 Mandatory   no
 Cardinality 0..1
+Attributes  
 Description Website of the dataset with related information
 Example     :code:`<dcat:landingPage>http://www.bafu.admin.ch/laerm/index.html?lang=de</dcat:landingPage>`
 =========== ===
@@ -330,10 +340,10 @@ Example     :code:`<dcat:landingPage>http://www.bafu.admin.ch/laerm/index.html?l
 -------------------
 
 =========== ===
-Attributes  
 Type        :code:`dct:Location` http://dublincore.org/documents/2012/06/14/dcmi-terms/?v=terms#Location
 Mandatory   no
 Cardinality 0..n
+Attributes  
 Description Geographical classification of the dataset. Can be a description, coordinates or a bounding-box.
 Example     :code:`<dct:spatial rdf:resource="http://publications.europa.eu/mdr/authority/country/ZWE"/>`
 =========== ===
@@ -342,10 +352,10 @@ Example     :code:`<dct:spatial rdf:resource="http://publications.europa.eu/mdr/
 --------------------
 
 =========== ===
-Attributes  
 Type        :code:`ct:PeriodOfTime` http://dublincore.org/documents/2012/06/14/dcmi-terms/?v=terms#terms-PeriodOfTime
 Mandatory   no
 Cardinality 0..n
+Attributes  
 Description One or more time period that cover the dataset
             :code:`<schema:startDate>` contains the start date 
             :code:`<schema:endDate>` contains the end date 
@@ -364,12 +374,13 @@ Example     .. code:: xml
 ------------------------------
 
 =========== ===
-Attributes  ===== =============================================
-            Name  :code:`rdf:resource`
-            Type  :code:`dct:Frequency`
-            ===== =============================================
 Mandatory   no
 Cardinality 0..1
+Attributes  ========== =============================================
+            Name       :code:`rdf:resource`
+            Type       :code:`dct:Frequency`
+            Mandatory  yes
+            ========== =============================================
 Description The frequency in which this dataset is updated.
 
             Values for :code:`dct:Frequency`: http://dublincore.org/groups/collections/frequency/
@@ -380,10 +391,10 @@ Example     :code:`<dct:accrualPeriodicity rdf:resource="http://purl.org/cld/fre
 --------------------
 
 =========== ===
-Attributes  
 Type        :code:`rdfs:Literal` http://www.w3.org/TR/rdf-schema/#ch_literal
 Mandatory   no
 Cardinality 0..n
+Attributes  
 Description Link to related datasets. Contains the identifier of the linked dataset.
 Example     :code:`<rdfs:seeAlso>326@swisstopo</rdfs:seeAlso>`
 =========== ===
@@ -392,10 +403,10 @@ Example     :code:`<rdfs:seeAlso>326@swisstopo</rdfs:seeAlso>`
 -------------------------
 
 =========== ===
-Attributes  
 Type        Nested elements. See `Definition of Distribution`_.
 Mandatory   no
 Cardinality 0..n
+Attributes  
 Description Distribution of the datasets.
 Example     
 =========== ===
@@ -408,13 +419,13 @@ Definition of Distribution
 ----------------------
 
 +------------+-----------------------------------------------------------------------------------+
-| Attributes |                                                                                   |
-+------------+-----------------------------------------------------------------------------------+
 | Type       | :code:`rdfs:Literal` http://www.w3.org/TR/rdf-schema/#ch_literal                  |
 +------------+-----------------------------------------------------------------------------------+
 | Mandatory  | no                                                                                |
 +------------+-----------------------------------------------------------------------------------+
 | Cardinality| 0..1                                                                              |
++------------+-----------------------------------------------------------------------------------+
+| Attributes |                                                                                   |
 +------------+-----------------------------------------------------------------------------------+
 | Description| Identifier of the distribution in the source system.                              |
 +------------+-----------------------------------------------------------------------------------+
@@ -425,19 +436,21 @@ Definition of Distribution
 :code:`dct:title`
 -----------------
 
++------------+-----------------------------------------------------------------------------------+
+| Type       | :code:`rdfs:Literal` http://www.w3.org/TR/rdf-schema/#ch_literal                  |
++------------+-----------------------------------------------------------------------------------+
+| Mandatory  | no - except if the distribution does not contain all the content of the dataset   |
++------------+-----------------------------------------------------------------------------------+
+| Cardinality| 0..n (one for each language)                                                      |
 +------------+-------------+---------------------------------------------------------------------+
 | Attributes | Name        | :code:`xml:lang`                                                    | 
 +            +-------------+---------------------------------------------------------------------+
 |            | Content     | :code:`en` :code:`de` :code:`fr` :code:`it`                         |  
 +            +-------------+---------------------------------------------------------------------+
 |            | Description | Language of the element                                             |  
++            +-------------+---------------------------------------------------------------------+
+|            | Mandatory   | yes                                                                 |  
 +------------+-------------+---------------------------------------------------------------------+
-| Type       | :code:`rdfs:Literal` http://www.w3.org/TR/rdf-schema/#ch_literal                  |
-+------------+-----------------------------------------------------------------------------------+
-| Mandatory  | no - except if the distribution does not contain all the content of the dataset   |
-+------------+-----------------------------------------------------------------------------------+
-| Cardinality| 0..n (one for each language)                                                      |
-+------------+-----------------------------------------------------------------------------------+
 | Description| The title of the distribution in the language defined by the :code:`xml:lang`     |
 |            | attribute. If this element is left out, the :code:`dct:title` of the dataset is   |
 |            | used instead                                                                      |
@@ -448,19 +461,21 @@ Definition of Distribution
 :code:`dct:description`
 -----------------------
 
++------------+-----------------------------------------------------------------------------------+
+| Type       | :code:`rdfs:Literal` http://www.w3.org/TR/rdf-schema/#ch_literal                  |
++------------+-----------------------------------------------------------------------------------+
+| Mandatory  | no - except if the distribution does not contain all the content of the dataset   |
++------------+-----------------------------------------------------------------------------------+
+| Cardinality| 0..n (one for each language)                                                      |
 +------------+-------------+---------------------------------------------------------------------+
 | Attributes | Name        | :code:`xml:lang`                                                    |
 +            +-------------+---------------------------------------------------------------------+
 |            | Content     | :code:`en` :code:`de` :code:`fr` :code:`it`                         |  
 +            +-------------+---------------------------------------------------------------------+
 |            | Description | Language of the element                                             |  
++            +-------------+---------------------------------------------------------------------+
+|            | Mandatory   | yes                                                                 |  
 +------------+-------------+---------------------------------------------------------------------+
-| Type       | :code:`rdfs:Literal` http://www.w3.org/TR/rdf-schema/#ch_literal                  |
-+------------+-----------------------------------------------------------------------------------+
-| Mandatory  | no - except if the distribution does not contain all the content of the dataset   |
-+------------+-----------------------------------------------------------------------------------+
-| Cardinality| 0..n (one for each language)                                                      |
-+------------+-----------------------------------------------------------------------------------+
 | Description| Description of the distribution in the language defined by the :code:`xml:lang`   |
 |            | attribute                                                                         |
 +------------+-----------------------------------------------------------------------------------+
@@ -470,19 +485,21 @@ Definition of Distribution
 :code:`dct:issued`
 ------------------
 
++------------+-----------------------------------------------------------------------------------+
+| Type       | :Date and time in ISO-8601_ format                                                |
++------------+-----------------------------------------------------------------------------------+
+| Mandatory  | yes                                                                               |
++------------+-----------------------------------------------------------------------------------+
+| Cardinality| 1..1                                                                              |
 +------------+-------------+---------------------------------------------------------------------+
 | Attributes | Name        | :code:`rdf:datatype`                                                |
 +            +-------------+---------------------------------------------------------------------+
 |            | Content     | http://www.w3.org/2001/XMLSchema#dateTime                           |  
 +            +-------------+---------------------------------------------------------------------+
 |            | Description | Type of the field                                                   |  
++            +-------------+---------------------------------------------------------------------+
+|            | Mandatory   | yes                                                                 |  
 +------------+-------------+---------------------------------------------------------------------+
-| Type       | :Date and time in ISO-8601_ format                                                |
-+------------+-----------------------------------------------------------------------------------+
-| Mandatory  | yes                                                                               |
-+------------+-----------------------------------------------------------------------------------+
-| Cardinality| 1..1                                                                              |
-+------------+-----------------------------------------------------------------------------------+
 | Description| Date of the publication of this distribution                                      |
 +------------+-----------------------------------------------------------------------------------+
 | Example    |  .. code:: xml                                                                    |
@@ -495,13 +512,7 @@ Definition of Distribution
 :code:`dct:modified`
 --------------------
 
-+------------+-------------+---------------------------------------------------------------------+
-| Attributes | Name        | :code:`rdf:datatype`                                                |       
-+            +-------------+---------------------------------------------------------------------+
-|            | Content     | http://www.w3.org/2001/XMLSchema#dateTime                           |  
-+            +-------------+---------------------------------------------------------------------+
-|            | Description | Type of the field                                                   |  
-+------------+-------------+---------------------------------------------------------------------+
++------------+-----------------------------------------------------------------------------------+
 | Type       | :Date and time in ISO-8601_ format                                                |
 +------------+-----------------------------------------------------------------------------------+
 | Mandatory  | Only when the distribution has changed since the first publication. If this       |
@@ -509,7 +520,15 @@ Definition of Distribution
 |            | latest change.                                                                    | 
 +------------+-----------------------------------------------------------------------------------+
 | Cardinality| 0..1                                                                              |
-+------------+-----------------------------------------------------------------------------------+
++------------+-------------+---------------------------------------------------------------------+
+| Attributes | Name        | :code:`rdf:datatype`                                                |       
++            +-------------+---------------------------------------------------------------------+
+|            | Content     | http://www.w3.org/2001/XMLSchema#dateTime                           |  
++            +-------------+---------------------------------------------------------------------+
+|            | Description | Type of the field                                                   |  
++            +-------------+---------------------------------------------------------------------+
+|            | Mandatory   | yes                                                                 |  
++------------+-------------+---------------------------------------------------------------------+
 | Description| Date of the last change of the distribution.                                      |
 +------------+-----------------------------------------------------------------------------------+
 | Example    |  .. code:: xml                                                                    |
@@ -523,32 +542,33 @@ Definition of Distribution
 --------------------
 
 =========== ===
-Attributes  
 Type        :code:`rdfs:Literal` ISO 639-1 two-letter code
 Content     :code:`en` :code:`de` :code:`fr` :code:`it`
 Mandatory   no
 Cardinality 0..n (for each language)
+Attributes  
 Description Languages in which this distribution is available. If the distribution is langauge-independant, this can be left out.
 Example     :code:`<dct:language>de</dct:language>`
-Open points What is this for exactly? The languages are defined on the fields with xml:lang already
 =========== ===
 
 :code:`dcat:accessURL`
 ----------------------
 
++------------+-----------------------------------------------------------------------------------+
+| Type       | http://www.w3.org/2001/XMLSchema#anyURI                                           |
++------------+-----------------------------------------------------------------------------------+
+| Mandatory  | yes                                                                               |
++------------+-----------------------------------------------------------------------------------+
+| Cardinality| 1..n                                                                              |
 +------------+-------------+---------------------------------------------------------------------+
 | Attributes | Name        | :code:`rdf:datatype`                                                | 
 +            +-------------+---------------------------------------------------------------------+
 |            | Content     | http://www.w3.org/2001/XMLSchema#anyURI                             |  
 +            +-------------+---------------------------------------------------------------------+
 |            | Description | Type of the field                                                   |  
++            +-------------+---------------------------------------------------------------------+
+|            | Mandatory   | yes                                                                 |  
 +------------+-------------+---------------------------------------------------------------------+
-| Type       | http://www.w3.org/2001/XMLSchema#anyURI                                           |
-+------------+-----------------------------------------------------------------------------------+
-| Mandatory  | yes                                                                               |
-+------------+-----------------------------------------------------------------------------------+
-| Cardinality| 1..n                                                                              |
-+------------+-----------------------------------------------------------------------------------+
 | Description| URL where the distribution can be found. This could be either a download URL,     |
 |            | a API URL or a landing page URL. If the distribution is only available through    |
 |            | a landing page, this field must contain the URL of the landing page.              |
@@ -562,19 +582,21 @@ Open points What is this for exactly? The languages are defined on the fields wi
 :code:`dct:downloadURL`
 -----------------------
 
++------------+-----------------------------------------------------------------------------------+
+| Type       | http://www.w3.org/2001/XMLSchema#anyURI                                           |
++------------+-----------------------------------------------------------------------------------+
+| Mandatory  | no                                                                                |
++------------+-----------------------------------------------------------------------------------+
+| Cardinality| 0..n                                                                              |
 +------------+-------------+---------------------------------------------------------------------+
 | Attributes | Name        | :code:`rdf:datatype`                                                | 
 +            +-------------+---------------------------------------------------------------------+
 |            | Content     | http://www.w3.org/2001/XMLSchema#anyURI                             |  
 +            +-------------+---------------------------------------------------------------------+
 |            | Description | Type of the field                                                   |  
++            +-------------+---------------------------------------------------------------------+
+|            | Mandatory   | yes                                                                 |  
 +------------+-------------+---------------------------------------------------------------------+
-| Type       | http://www.w3.org/2001/XMLSchema#anyURI                                           |
-+------------+-----------------------------------------------------------------------------------+
-| Mandatory  | no                                                                                |
-+------------+-----------------------------------------------------------------------------------+
-| Cardinality| 0..n                                                                              |
-+------------+-----------------------------------------------------------------------------------+
 | Description| URL of a data file, if the distribution can be downloaded. For each of these,     |
 |            | a :code:`dcat:accessURL` has to exist.                                            |
 +------------+-----------------------------------------------------------------------------------+
@@ -616,14 +638,14 @@ Open points What is this for exactly? The languages are defined on the fields wi
 |            |             |   (**not acceptable** for opendata.swiss)                                   |
 |            |             |                                                                             |
 +------------+-------------+-----------------------------------------------------------------------------+
-| Attributes |                                                                                           |
-+------------+-------------------------------------------------------------------------------------------+
 | Type       | Open Data Rights Statement Vocabulary                                                     |
 |            | (https://theodi.org/guides/publishers-guide-to-the-open-data-rights-statement-vocabulary) |
 +------------+-------------------------------------------------------------------------------------------+
 | Mandatory  | yes                                                                                       |
 +------------+-------------------------------------------------------------------------------------------+
 | Cardinality| 1..1                                                                                      |
++------------+-------------------------------------------------------------------------------------------+
+| Attributes |                                                                                           |
 +------------+-------------------------------------------------------------------------------------------+
 | Description| Rights statement of this distribution. This is composed of 3 elements that can be         |
 |            | summarized in a string literal:                                                           |
@@ -644,10 +666,10 @@ Open points What is this for exactly? The languages are defined on the fields wi
 -------------------
 
 =========== ===
-Attributes  
 Type        :code:`dct:LicenseDocument`
 Mandatory   no
 Cardinality 0..1
+Attributes  
 Description Not used, see :code:`dct:rights`. This field ensures compatibility to other metadata standards.
 Example     :code:`<dct:license />`
 =========== ===
@@ -656,10 +678,10 @@ Example     :code:`<dct:license />`
 ---------------------
 
 =========== ===
-Attributes  
 Type        :code:`rdfs:Literal` http://www.w3.org/TR/rdf-schema/#ch_literal
 Mandatory   no - except if the distribution is available as a data download (see :code:`downloadURL`).
 Cardinality 0..1
+Attributes  
 Description Size of the data in bytes
 Example     :code:`<dcat:byteSize>1024</dcat:byteSize>`
 =========== ===
@@ -668,10 +690,10 @@ Example     :code:`<dcat:byteSize>1024</dcat:byteSize>`
 ----------------------
 
 =========== ===
-Attributes  
 Type        :code:`dct:MediaTypeOrExtent` http://www.iana.org/assignments/media-types/media-types.xhtml
 Mandatory   no - except if the distribution is available as a data download (see :code:`downloadURL`).
 Cardinality 0..1
+Attributes  
 Description Only values from the list of IANA MIME types
             http://www.iana.org/assignments/media-types/media-types.xhtml
 Example     :code:`<dcat:mediaType>text/html</dcat:mediaType>`
@@ -681,10 +703,10 @@ Example     :code:`<dcat:mediaType>text/html</dcat:mediaType>`
 ------------------
 
 =========== ===
-Attributes  
 Type        :code:`dct:MediaTypeOrExtent`
 Mandatory   no
 Cardinality 0..1
+Attributes  
 Description Available for compatibility reasons. Not used
 Example     :code:`<dct:format/>`
 =========== ===
@@ -693,10 +715,10 @@ Example     :code:`<dct:format/>`
 --------------------
 
 =========== ===
-Attributes  
 Type        :code:`dct:LocationPeriodOrJurisdiction` http://dublincore.org/documents/2012/06/14/dcmi-terms/?v=terms#LocationPeriodOrJurisdiction
 Mandatory   no
 Cardinality 0..n
+Attributes  
 Description Distributions can be classified by their location or time period (for example, one for each canton, one for each year, etc...)
 Example     :code:`<dct:coverage/>`
 =========== ===
@@ -709,18 +731,16 @@ Common fields
 -----------------------
 
 +------------+-------------+---------------------------------------------------------------------+
-| Elements   | :code:`rdfs:label`                                                                |
+| Type       | :code:`rdfs:label`                                                                |
 +------------+-------------+---------------------------------------------------------------------+
-| Attributes | Name        | :code:`rdf:about`                                                   | 
-+            +-------------+---------------------------------------------------------------------+
-|            | Mandatory   | No                                                                  |  
-+------------+-------------+---------------------------------------------------------------------+
-| Type       | Sub-element                                                                       |
-+------------+-----------------------------------------------------------------------------------+
 | Mandatory  | yes                                                                               |
 +------------+-----------------------------------------------------------------------------------+
 | Cardinality| 1..1                                                                              |
 +------------+-----------------------------------------------------------------------------------+
+| Attributes | Name        | :code:`rdf:about`                                                   | 
++            +-------------+---------------------------------------------------------------------+
+|            | Mandatory   | No                                                                  |  
++------------+-------------+---------------------------------------------------------------------+
 | Description| The description of the dataset/distribution                                       |
 +------------+-----------------------------------------------------------------------------------+
 
