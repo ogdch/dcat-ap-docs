@@ -55,14 +55,14 @@
             <rdfs:label>Webseite des BAFU</rdfs:label>
           </rdf:Description>
         </dct:relation>
-        <dcat:keyword xml:lang="de" rdf:about="#eisenbahn">Eisenbahn</dcat:keyword>
-        <dcat:keyword xml:lang="fr" rdf:about="#eisenbahn">Chemin-de-fer</dcat:keyword>
-        <dcat:keyword xml:lang="it" rdf:about="#eisenbahn">Ferrovia</dcat:keyword>
-        <dcat:keyword xml:lang="en" rdf:about="#eisenbahn">Railroad</dcat:keyword>
-        <dcat:keyword xml:lang="de" rdf:about="#nacht">Nacht</dcat:keyword>
-        <dcat:keyword xml:lang="fr" rdf:about="#nacht">Nuit</dcat:keyword>
-        <dcat:keyword xml:lang="it" rdf:about="#nacht">Noche</dcat:keyword>
-        <dcat:keyword xml:lang="en" rdf:about="#nacht">Night</dcat:keyword>
+        <dcat:keyword xml:lang="de">Eisenbahn</dcat:keyword>
+        <dcat:keyword xml:lang="fr">Chemin-de-fer</dcat:keyword>
+        <dcat:keyword xml:lang="it">Ferrovia</dcat:keyword>
+        <dcat:keyword xml:lang="en">Railroad</dcat:keyword>
+        <dcat:keyword xml:lang="de">Nacht</dcat:keyword>
+        <dcat:keyword xml:lang="fr">Nuit</dcat:keyword>
+        <dcat:keyword xml:lang="it">Noche</dcat:keyword>
+        <dcat:keyword xml:lang="en">Night</dcat:keyword>
         <dcat:landingPage>http://www.bafu.admin.ch/laerm/index.html?lang=de</dcat:landingPage>
         <dct:spatial/>
         <dct:coverage/>
@@ -132,14 +132,14 @@
             <rdfs:label>Webseite swissBOUNDARIES</rdfs:label>
           </rdf:Description>
         </dct:relation>
-        <dcat:keyword xml:lang="de" rdf:about="#landesgrenze">Landesgrenze</dcat:keyword>
-        <dcat:keyword xml:lang="fr" rdf:about="#landesgrenze">Frontières nationales</dcat:keyword>
-        <dcat:keyword xml:lang="it" rdf:about="#landesgrenze">Frontiere nazionali</dcat:keyword>
-        <dcat:keyword xml:lang="en" rdf:about="#landesgrenze">National boundaries</dcat:keyword>
-        <dcat:keyword xml:lang="de" rdf:about="#verwaltungseinheiten">Verwaltungseinheiten</dcat:keyword>
-        <dcat:keyword xml:lang="fr" rdf:about="#verwlatungseinheiten">Unités administratives</dcat:keyword>
-        <dcat:keyword xml:lang="it" rdf:about="#verwaltungseinheiten">Unita amministrative</dcat:keyword>
-        <dcat:keyword xml:lang="en" rdf:about="#verwaltungseinheiten">Administrative units</dcat:keyword>
+        <dcat:keyword xml:lang="de">Landesgrenze</dcat:keyword>
+        <dcat:keyword xml:lang="fr">Frontières nationales</dcat:keyword>
+        <dcat:keyword xml:lang="it">Frontiere nazionali</dcat:keyword>
+        <dcat:keyword xml:lang="en">National boundaries</dcat:keyword>
+        <dcat:keyword xml:lang="de">Verwaltungseinheiten</dcat:keyword>
+        <dcat:keyword xml:lang="fr">Unités administratives</dcat:keyword>
+        <dcat:keyword xml:lang="it">Unita amministrative</dcat:keyword>
+        <dcat:keyword xml:lang="en">Administrative units</dcat:keyword>
         <dcat:landingPage>http://www.swisstopo.admin.ch/internet/swisstopo/de/home/products/landscape/swissBOUNDARIES3D.html</dcat:landingPage>
         <dct:spatial/>
         <dct:coverage/>

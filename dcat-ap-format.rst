@@ -290,27 +290,28 @@ Example     .. code:: xml
 --------------------
 
 +------------+-------------+---------------------------------------------------------------------+
-| Attributes | Name        | :code:`xml:lang`                                                    | 
-+            +-------------+---------------------------------------------------------------------+
-|            | Content     | :code:`en` :code:`de` :code:`fr` :code:`it`                         |  
-+            +-------------+---------------------------------------------------------------------+
-|            | Description | Language of the element                                             |  
-+------------+-------------+---------------------------------------------------------------------+
 | Type       | :code:`rdfs:Literal` http://www.w3.org/TR/rdf-schema/#ch_literal                  |
 +------------+-----------------------------------------------------------------------------------+
 | Mandatory  | no                                                                                |
 +------------+-----------------------------------------------------------------------------------+
 | Cardinality| 0..n                                                                              |
++------------+-------------+---------------------------------------------------------------------+
+| Attributes | Name        | :code:`xml:lang`                                                    | 
++            +-------------+---------------------------------------------------------------------+
+|            | Content     | :code:`en` :code:`de` :code:`fr` :code:`it`                         |  
++            +-------------+---------------------------------------------------------------------+
+|            | Description | Language of the element                                             |  
++            +-------------+---------------------------------------------------------------------+
+|            | Mandatory   | yes                                                                 |  
 +------------+-----------------------------------------------------------------------------------+
 | Description| Keyword who describe that dataset.                                                |
-|            | TODO check if TERMDAT is there                                                    |
 +------------+-----------------------------------------------------------------------------------+
 | Example    | .. code:: xml                                                                     |
 |            |                                                                                   |
-|            |   <dcat:keyword xml:lang="de" rdf:about="#nacht">Nacht</dcat:keyword>             |
-|            |   <dcat:keyword xml:lang="fr" rdf:about="#nacht">Nuit</dcat:keyword>              |
-|            |   <dcat:keyword xml:lang="it" rdf:about="#nacht">Noche</dcat:keyword>             |
-|            |   <dcat:keyword xml:lang="en" rdf:about="#nacht">Night</dcat:keyword>             |
+|            |   <dcat:keyword xml:lang="de">Nacht</dcat:keyword>                                |
+|            |   <dcat:keyword xml:lang="fr">Nuit</dcat:keyword>                                 |
+|            |   <dcat:keyword xml:lang="it">Noche</dcat:keyword>                                |
+|            |   <dcat:keyword xml:lang="en">Night</dcat:keyword>                                |
 +------------+-----------------------------------------------------------------------------------+
 
 :code:`dcat:landingPage`
